@@ -33,7 +33,7 @@ namespace app
             fn1();
             fn2(2);
             Console.WriteLine(fn3());
-            Console.WriteLine(fn4(4));
+            Console.WriteLine(fn4(4));            
         }
 
         static void Fn1()

@@ -25,7 +25,7 @@ namespace app
         {
             var bs = new BroadcastingStation();
             bs.Broadcast += Listener1;//订阅
-            bs.Broadcast += Listener2;//订阅
+            bs.Broadcast += Listener2;//订阅            
             bs.play();
         }
 

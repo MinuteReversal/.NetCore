@@ -6,8 +6,8 @@ namespace _01if语句
     {
         static void Main(string[] args)
         {
-            int age = 32;
-            if (age >= 33)
+            bool isFirst =true;
+            if (isFirst)
             {
                 Console.WriteLine("我是zhy");
                 Console.WriteLine("我今年33岁");

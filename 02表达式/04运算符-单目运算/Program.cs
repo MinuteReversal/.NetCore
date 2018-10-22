@@ -8,9 +8,13 @@ namespace app
         {
             int i = 0;
             Console.WriteLine(i++);//0
+            Console.WriteLine(i);   //1
             Console.WriteLine(++i);//2
+            Console.WriteLine(i);  //2
             Console.WriteLine(i--);//2
+            Console.WriteLine(i);  //1
             Console.WriteLine(--i);//0
+            Console.WriteLine(i);
         }
     }
 }

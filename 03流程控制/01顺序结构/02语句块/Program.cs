@@ -7,13 +7,15 @@ namespace _02语句块
         static void Main(string[] args)
         {
             int a = 123;
+            int b = 0;
             {
-                int i = 1;
+                int i = 2;
                 i += 2;
                 i *= 2;
-                Console.WriteLine("the value of i is {0}{1}", i, a);
+                Console.WriteLine("the value of i is {0},{1}", i, a);
+                b = i;
             }
-            Console.WriteLine(i);
+            Console.WriteLine(b);
         }
     }
 }

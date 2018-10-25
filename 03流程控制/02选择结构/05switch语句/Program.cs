@@ -23,7 +23,7 @@ namespace _05switch语句
                     break;
             }
             Console.WriteLine("还有其他你喜欢的吗？");
-
+            Console.WriteLine("you choose is {0}", fruittype);
         }
     }
 }

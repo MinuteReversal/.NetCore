@@ -6,12 +6,12 @@ namespace 递归
     {
         static void Main(string[] args)
         {
-            FnR();
+            Fn();
         }
 
-        static void FnR()
+        static void Fn()
         {
-            FnR();
+            Fn();
         }
     }
 }

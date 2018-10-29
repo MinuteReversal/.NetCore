@@ -10,26 +10,31 @@ namespace app
             Action<int> f2 = Fn2;
             Func<int> f3 = Fn3;
             Func<int, int> f4 = Fn4;
+
+            f1();
+            f2(88);
+            Console.WriteLine(f3());
+            Console.WriteLine(f4(666));
         }
 
         static void Fn1()
         {
-
+            Console.WriteLine("call Fn1");
         }
 
         static void Fn2(int i)
         {
-
+            Console.WriteLine($"call Fn2 i:{i}");
         }
 
         static int Fn3()
         {
-            return 0;
+            return 1024;
         }
 
         static int Fn4(int i)
         {
-            return 0;
+            return i;
         }
     }
 }

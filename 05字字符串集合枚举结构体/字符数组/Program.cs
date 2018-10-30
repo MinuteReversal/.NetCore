@@ -12,6 +12,8 @@ namespace 字符数组
             string s1 = new string(cs1);
             Console.WriteLine(s1);
 
+            char[] cs2 = s1.ToCharArray();
+            Console.WriteLine(cs2);
         }
     }
 }

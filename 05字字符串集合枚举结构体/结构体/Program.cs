@@ -6,9 +6,16 @@ namespace 结构体
 {
     class Program
     {
+        struct Book
+        {
+            public decimal price;
+            public string title;
+            public string author;
+        }
+
         struct Student
         {
-            public static readonly Student Empty;//建议封装
+            public static readonly Student Empty = new Student();//建议封装
 
             public string name;
 

@@ -24,7 +24,7 @@ namespace 结构体
             // Console.WriteLine(s1.name);
             // Console.WriteLine(s1.gender);
 
-            //===============需要对每个成员赋值=================
+            //*************************需要对每个成员赋值*************************
             Student s1;
             s1.age = 31;
             s1.name = "lily";

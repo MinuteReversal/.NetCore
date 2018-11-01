@@ -8,6 +8,7 @@ namespace 结构体
     {
         struct Student
         {
+            public static readonly Student Empty;//建议封装
 
             public string name;
 
@@ -19,23 +20,28 @@ namespace 结构体
 
         static void Main(string[] args)
         {
+
+            Color color = Color.Empty;
+            Point point = Point.Empty;
+            Guid guid = Guid.Empty;
+
             // Student s;
             // Console.WriteLine(s1.age);
             // Console.WriteLine(s1.name);
             // Console.WriteLine(s1.gender);
 
             //*************************需要对每个成员赋值*************************
-            Student s1;
+            Student s1 = Student.Empty;
             s1.age = 31;
             s1.name = "lily";
             s1.gender = 0;
 
-            Student s2;
+            Student s2 = Student.Empty;
             s2.age = 18;
             s2.name = "lucy";
             s2.gender = 0;
 
-            Student s3;
+            Student s3 = Student.Empty;
             s3.age = 22;
             s3.name = "lilei";
             s3.gender = 1;

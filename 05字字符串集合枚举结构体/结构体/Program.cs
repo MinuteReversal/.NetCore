@@ -38,7 +38,7 @@ namespace 结构体
             // Console.WriteLine(s1.gender);
 
             //*************************需要对每个成员赋值*************************
-            Student s1 = Student.Empty;
+            Student s1;
             s1.age = 31;
             s1.name = "lily";
             s1.gender = 0;
@@ -48,7 +48,7 @@ namespace 结构体
             s2.name = "lucy";
             s2.gender = 0;
 
-            Student s3 = Student.Empty;
+            Student s3 = new Student();
             s3.age = 22;
             s3.name = "lilei";
             s3.gender = 1;

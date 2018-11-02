@@ -65,6 +65,11 @@ namespace 结构体
             ss1.Add(s1);
             ss1.Add(s2);
             ss1.Add(s3);
+
+            ss1.Remove(s2);
+            ss1.RemoveAt(2);
+
+            ss1.Insert(1, s2);
         }
     }
 }

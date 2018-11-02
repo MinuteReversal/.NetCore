@@ -8,12 +8,11 @@ namespace 数组经过方法
         {
             int[] a = { 1, 2, 3, 4, 5 };//引用类型（windows快捷方式)
             int[] b = a;
-            Line();
             Show(a);
-            Change(a);
-            Line();
+            Show(b);
+            a[2] = 88;
+            a[4] = 77;
             Show(a);
-            Line();
             Show(b);
         }
 
@@ -28,12 +27,6 @@ namespace 数组经过方法
             {
                 Console.WriteLine(item);
             }
-        }
-
-        static void Change(int[] arr)
-        {
-            arr[2] = 88;
-            arr[4] = 77;
         }
     }
 }

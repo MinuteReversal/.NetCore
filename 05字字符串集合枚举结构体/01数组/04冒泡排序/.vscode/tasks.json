@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/数组.csproj"
+                "${workspaceFolder}/04冒泡排序.csproj"
             ],
             "problemMatcher": "$msCompile"
         }

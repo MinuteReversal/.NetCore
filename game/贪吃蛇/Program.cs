@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace app
+namespace 贪吃蛇
 {
     class Program
     {

@@ -6,12 +6,6 @@ namespace 结构体
 {
     class Program
     {
-        struct Book
-        {
-            public decimal price;
-            public string title;
-            public string author;
-        }
 
         struct Student
         {
@@ -27,16 +21,6 @@ namespace 结构体
 
         static void Main(string[] args)
         {
-
-            Color color = Color.Empty;
-            Point point = Point.Empty;
-            Guid guid = Guid.Empty;
-
-            // Student s;
-            // Console.WriteLine(s1.age);
-            // Console.WriteLine(s1.name);
-            // Console.WriteLine(s1.gender);
-
             //*************************需要对每个成员赋值*************************
             Student s1;
             s1.age = 31;
@@ -58,7 +42,7 @@ namespace 结构体
             Student[] ss = { s1, s2, s3 };
             foreach (var student in ss)
             {
-                Console.WriteLine(student.name);
+                Console.WriteLine($"姓名:{student.name},年龄:{student.age},性别:{(student.gender==0?"女":"男")}");
             }
 
             List<Student> ss1 = new List<Student>();

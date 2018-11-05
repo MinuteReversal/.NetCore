@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Diagnostics;
-using System.IO;
 
 namespace 无限输出当前目录
 {
@@ -8,21 +7,19 @@ namespace 无限输出当前目录
     {
         static void Main(string[] args)
         {
-            string output = string.Empty;
-            string error = string.Empty;
+            var output = string.Empty;
 
-            ProcessStartInfo processStartInfo = new ProcessStartInfo("cmd", "/c dir");
-            processStartInfo.RedirectStandardOutput = true;
-            processStartInfo.WindowStyle = ProcessWindowStyle.Normal;
-            processStartInfo.UseShellExecute = false;
+            ProcessStartInfo processStartInfo = new ProcessStartInfo("cmd", "/c dir");//设置要启动的程序
+            processStartInfo.RedirectStandardOutput = true;                           //转向标准输出
+            processStartInfo.UseShellExecute = false;                                 //不使用壳执行
 
-            Process process = Process.Start(processStartInfo);
-            using (StreamReader streamReader = process.StandardOutput)
+            Process process = Process.Start(processStartInfo);//启动程序
+            using (var streamReader = process.StandardOutput)//获取启动的程序的输出内容
             {
                 output = streamReader.ReadToEnd();
             }
             //无限输出
-            for (; ; ) Console.WriteLine(output);
+            while (true) Console.WriteLine(output);
         }
     }
 }

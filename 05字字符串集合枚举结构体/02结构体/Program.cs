@@ -24,6 +24,7 @@ namespace 结构体
             //*************************需要对每个成员赋值*************************
             Student s1;
             s1.age = 31;
+            
             s1.name = "lily";
             s1.gender = 0;
 
@@ -42,7 +43,7 @@ namespace 结构体
             Student[] ss = { s1, s2, s3 };
             foreach (var student in ss)
             {
-                Console.WriteLine($"姓名:{student.name},年龄:{student.age},性别:{(student.gender==0?"女":"男")}");
+                Console.WriteLine($"姓名:{student.name},年龄:{student.age},性别:{(student.gender == 0 ? "女" : "男")}");
             }
 
             List<Student> ss1 = new List<Student>();

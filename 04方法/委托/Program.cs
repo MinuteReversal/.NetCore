@@ -2,13 +2,12 @@
 
 namespace app
 {
-    delegate void DFn1();
-    delegate void DFn2(int i);
-    delegate int DFn3();
-    delegate int DFn4(int i);
-
     class Program
     {
+        delegate void DFn1();
+        delegate void DFn2(int i);
+        delegate int DFn3();
+        delegate int DFn4(int i);
         static void Main(string[] args)
         {
             /*
@@ -33,7 +32,7 @@ namespace app
             fn1();
             fn2(2);
             Console.WriteLine(fn3());
-            Console.WriteLine(fn4(4));            
+            Console.WriteLine(fn4(4));
         }
 
         static void Fn1()

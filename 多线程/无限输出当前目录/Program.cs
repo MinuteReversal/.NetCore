@@ -8,6 +8,7 @@ namespace 无限输出当前目录
         static void Main(string[] args)
         {
             var output = string.Empty;
+            Console.ForegroundColor = ConsoleColor.Green;//修改前景色
 
             ProcessStartInfo processStartInfo = new ProcessStartInfo("cmd", "/c dir");//设置要启动的程序
             processStartInfo.RedirectStandardOutput = true;                           //转向标准输出

@@ -5,11 +5,13 @@ using System.Text.RegularExpressions;
 
 namespace 查分
 {
+
+    enum Gender { 女 = 0, 男 = 1 }//性别
     class Program
     {
         struct Student
         {
-            public string name; public double score1; public double score2; public double score3; public double score4; public double score5; public double score;
+            public string name; public Gender gender; public double score1; public double score2; public double score3; public double score4; public double score5; public double score;
         }
 
         static Student[] soft1801 = new Student[44];//定义一个44个成员的数组
@@ -27,7 +29,7 @@ namespace 查分
                 inputName = Console.ReadLine();
                 FindByName(inputName);
             } while (inputName != "q");
-            Console.WriteLine("退出系统。");
+            Console.WriteLine("已退出系统。");
         }
         /* 加载数据 */
         static void LoadData()
@@ -36,17 +38,18 @@ namespace 查分
             if (!File.Exists(path)) Console.WriteLine("没有找到数据文件，请联系老师。");
             using (StreamReader sr = new StreamReader(path))
             {
-                sr.ReadLine();
+                sr.ReadLine();//跳过表头
                 for (var i = 0; sr.Peek() >= 0; i++)
                 {
                     var ts = sr.ReadLine().Split(",");
                     var ss = soft1801[i];
                     ss.name = NameToUnicode(ts[0]);
-                    ss.score1 = double.Parse(ts[1]);
-                    ss.score2 = double.Parse(ts[2]);
-                    ss.score3 = double.Parse(ts[3]);
-                    ss.score4 = double.Parse(ts[4]);
-                    ss.score5 = double.Parse(ts[5]);
+                    ss.gender = (Gender)int.Parse(ts[1]);
+                    ss.score1 = double.Parse(ts[1 + 1]);
+                    ss.score2 = double.Parse(ts[2 + 1]);
+                    ss.score3 = double.Parse(ts[3 + 1]);
+                    ss.score4 = double.Parse(ts[4 + 1]);
+                    ss.score5 = double.Parse(ts[5 + 1]);
                     ss.score = ss.score1 +
                                ss.score2 +
                                ss.score3 +
@@ -74,8 +77,10 @@ namespace 查分
             {
                 if (s.name.Contains(name))
                 {
-                    Console.WriteLine("姓名：" + s.name +
-                                    ",选择题：" + s.score1 +
+                    Console.WriteLine("姓名:" + s.name +
+                                    ",性别:" + s.gender +
+                                    ",《程序设计基础》期中考试分数=>"+
+                                    "选择题:" + s.score1 +
                                     "分,判断题:" + s.score3 +
                                     "分,填空题:" + s.score4 +
                                     "分,编程题:" + s.score5 +

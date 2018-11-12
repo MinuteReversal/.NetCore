@@ -1,18 +1,22 @@
 ﻿using System;
 using System.IO;
-using System.Collections.Generic;
-using System.Text.RegularExpressions;
-
 namespace 查分
 {
 
     enum Gender { 女 = 0, 男 = 1 }//性别
+    struct Student
+    {
+        public string name;
+        public Gender gender;
+        public double score1;
+        public double score2;
+        public double score3;
+        public double score4;
+        public double score5;
+        public double score;
+    }
     class Program
     {
-        struct Student
-        {
-            public string name; public Gender gender; public double score1; public double score2; public double score3; public double score4; public double score5; public double score;
-        }
 
         static Student[] soft1801 = new Student[44];//定义一个44个成员的数组
 
@@ -79,7 +83,7 @@ namespace 查分
                 {
                     Console.WriteLine("姓名:" + s.name +
                                     ",性别:" + s.gender +
-                                    ",《程序设计基础》期中考试分数=>"+
+                                    ",《程序设计基础》期中考试分数=>" +
                                     "选择题:" + s.score1 +
                                     "分,判断题:" + s.score3 +
                                     "分,填空题:" + s.score4 +

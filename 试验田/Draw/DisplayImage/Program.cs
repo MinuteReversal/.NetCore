@@ -8,7 +8,7 @@ namespace DisplayImage
         static void Main(string[] args)
         {
             Console.OutputEncoding = System.Text.Encoding.UTF8;
-            Bitmap bmpSrc = new Bitmap(@"HuwnC.gif", true);
+            Bitmap bmpSrc = new Bitmap(@"teq9P.jpg", true);
             ConsoleWriteImage(bmpSrc);
         }
 

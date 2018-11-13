@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 namespace UTF8Find
 {
@@ -6,6 +7,8 @@ namespace UTF8Find
     {
         static void Main(string[] args)
         {
+            Console.InputEncoding = Encoding.Unicode;
+            Console.OutputEncoding = Encoding.Unicode;
             var input = "";
             do
             {

@@ -9,6 +9,7 @@ namespace Question
             var choice = "";
             do
             {
+                Line();
                 Console.Write(
                                 "请输入序号进行选择\n" +
                                 "1.开始游戏\n" +
@@ -16,7 +17,8 @@ namespace Question
                                 "3.加载存档\n" +
                                 "4.设置\n" +
                                 "5.人员名单\n" +
-                                "6.退出\n"
+                                "6.退出\n" +
+                                "请输入您的选择："
                             );
                 choice = Console.ReadLine();
                 switch (choice)
@@ -65,6 +67,18 @@ namespace Question
         static void Option5()
         {
             Console.WriteLine("你的选择是人员名单");
+            Console.WriteLine("设计：反转的分针");
+            Console.WriteLine("实现：反转的分针");
+            Console.WriteLine("界面：反转的分针");
+        }
+
+        static void Line()
+        {
+            for (var i = 0; i < 20; i++)
+            {
+                Console.Write("*");
+            }
+            Console.Write("\n");
         }
     }
 }

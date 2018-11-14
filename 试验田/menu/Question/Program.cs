@@ -9,7 +9,7 @@ namespace Question
             var choice = "";
             do
             {
-                Line();
+                Line();//华丽的分隔线
                 Console.Write(
                                 "请输入序号进行选择\n" +
                                 "1.开始游戏\n" +
@@ -47,21 +47,26 @@ namespace Question
         static void Option1()
         {
             Console.WriteLine("你的选择是开始游戏");
+            Console.WriteLine("游戏开始了。");
+            Console.WriteLine("Good Luck");
         }
 
         static void Option2()
         {
             Console.WriteLine("你的选择是继续游戏");
+            Console.WriteLine("加载了上次的存档，游戏继续了。");
         }
 
         static void Option3()
         {
             Console.WriteLine("你的选择是加载存档");
+            Console.WriteLine("请选择存档：\n> 1.2018-11-14\n  2.2018-09-12");
         }
 
         static void Option4()
         {
             Console.WriteLine("你的选择是设置");
+            Console.WriteLine("没有设计设置功能。");
         }
 
         static void Option5()
@@ -72,11 +77,12 @@ namespace Question
             Console.WriteLine("界面：反转的分针");
         }
 
-        static void Line()
+        //画一条分隔线
+        static void Line(int count = 20, char word = '*')
         {
-            for (var i = 0; i < 20; i++)
+            for (var i = 0; i < count; i++)
             {
-                Console.Write("*");
+                Console.Write(word);
             }
             Console.Write("\n");
         }

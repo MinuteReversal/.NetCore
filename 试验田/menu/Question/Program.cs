@@ -76,8 +76,12 @@ namespace Question
             Console.WriteLine("实现：反转的分针");
             Console.WriteLine("界面：反转的分针");
         }
-
-        //画一条分隔线
+        
+        ///<summary>画一条华丽的分隔线</summary>
+        ///<para>count:填入线的长度</para>
+        ///<para>word:用什么字符填充线</para>
+        ///<returns>没有返回值</returns>
+        ///<remarks>xml 文档注释 详见 https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments</remarks>
         static void Line(int count = 20, char word = '*')
         {
             for (var i = 0; i < count; i++)

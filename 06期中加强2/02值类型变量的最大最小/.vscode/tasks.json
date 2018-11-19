@@ -1,0 +1,15 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/03值类型变量的最大最小.csproj"
+            ],
+            "problemMatcher": "$msCompile"
+        }
+    ]
+}

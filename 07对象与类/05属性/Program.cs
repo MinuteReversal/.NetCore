@@ -2,77 +2,70 @@
 
 namespace _05属性
 {
-    class Program
+    class Watch
     {
-        class Watch
+        private int _hour;//字段首字母大写
+        private int _minute;//字段首字母大写
+        private int _second;//字段首字母大写
+
+        //参数名首字母小写
+        public int Hour
         {
-            private int Hour;//字段首字母大写
-            private int Minute;//字段首字母大写
-            private int Second;//字段首字母大写
-
-            //参数名首字母小写
-            public void SetHour(int hour)
+            get { return _hour; }
+            set
             {
-                if (hour > 0 && hour < 24)
+                if (value > 0 && value < 24)
                 {
-                    Hour = hour;
+                    _hour = value;
                 }
                 else
                 {
-                    throw new ArgumentOutOfRangeException("hours 超过0-23的限制！");
+                    throw new ArgumentOutOfRangeException("Hour 超过0-23的限制！");
                 }
             }
-
-            public int GetHour()
+        }
+        public int Minute
+        {
+            get { return _minute; }
+            set
             {
-                return Hour;
-            }
-
-            public void SetMinute(int minute)
-            {
-                if (minute > 0 && minute < 60)
+                if (value > 0 && value < 59)
                 {
-                    Minute = minute;
+                    _minute = value;
                 }
                 else
                 {
-                    throw new ArgumentOutOfRangeException("hours 超过0-23的限制！");
+                    throw new ArgumentOutOfRangeException("Minute 超过0-59的限制！");
                 }
-            }
-
-            public int GetMinute()
-            {
-                return Minute;
-            }
-
-            public void SetSecond(int second)
-            {
-                if (second > 0 && second < 60)
-                {
-                    Second = second;
-                }
-                else
-                {
-                    throw new ArgumentOutOfRangeException("hours 超过0-23的限制！");
-                }
-            }
-
-            public int GetSecond()
-            {
-                return Second;
             }
         }
 
-        class Program
+        public int Second
         {
-            static void Main(string[] args)
+            get { return _second; }
+            set
             {
-                var watch = new Watch();
-                watch.SetHour(23);
-                watch.SetMinute(59);
-                watch.SetSecond(29);
-                Console.WriteLine($"{watch.GetHour()}:{watch.GetMinute()}:{watch.GetSecond()}");
+                if (value > 0 && value < 59)
+                {
+                    _second = value;
+                }
+                else
+                {
+                    throw new ArgumentOutOfRangeException("Second 超过0-59的限制！");
+                }
             }
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var watch = new Watch();
+            watch.Hour = 23;
+            watch.Minute = 30;
+            watch.Second = 30;
+            Console.WriteLine($"{watch.Hour}:{watch.Minute}:{watch.Second}");
         }
     }
 }

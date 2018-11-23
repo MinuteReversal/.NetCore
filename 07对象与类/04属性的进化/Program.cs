@@ -4,9 +4,9 @@ namespace _04属性的进化
 {
     class Watch
     {
-        public int Hours;
-        public int Minutes;
-        public int Seconds;
+        public int Hour;
+        public int Minute;
+        public int Second;
     }
 
     class Program
@@ -14,9 +14,9 @@ namespace _04属性的进化
         static void Main(string[] args)
         {
             var watch = new Watch();
-            watch.Hours = 123;
+            watch.Hour = 123;
             watch.Minute = 456;
-            watch.Seconds = 789;
+            watch.Second = 789;
         }
     }
 }

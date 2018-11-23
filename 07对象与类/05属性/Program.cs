@@ -24,6 +24,7 @@ namespace _05属性
                 }
             }
         }
+        #region 属性
         public int Minute
         {
             get { return _minute; }
@@ -55,6 +56,7 @@ namespace _05属性
                 }
             }
         }
+        #endregion
     }
 
     class Program

@@ -20,7 +20,7 @@ namespace _01构造器
         static void Main(string[] args)
         {
             var cat1 = new Cat("白色", "Kitty");
-            var cat2 = new Cat("蓝色", "哆啦A梦");
+            var cat2 = new Cat("蓝色", "Doreamon");
             var cat3 = new Cat("黄色", "Coffee");
         }
     }

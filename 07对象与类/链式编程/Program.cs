@@ -2,7 +2,7 @@
 
 namespace 链式编程
 {
-
+    //定义一个类A
     class A
     {
         public A(string name)
@@ -34,7 +34,7 @@ namespace 链式编程
     {
         static void Main(string[] args)
         {
-            new A("AAA").Eat().Run().Drink();
+            new A("AAA").Eat().Run().Drink();//实例化A类，调用其成员方法
         }
     }
 }

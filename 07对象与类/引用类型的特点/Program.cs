@@ -10,7 +10,7 @@ namespace 引用类型的特点
         {
             public A(string name)
             {
-                Name = name;
+                this.Name = name;
             }
             public string Name;
         }
@@ -20,7 +20,7 @@ namespace 引用类型的特点
             var a = new A("Hello");//对A对象创建了一个快捷方式a
             var b = a;             //创建一个快捷方式b指向A的对象
             var c = a;             //创建一个快捷方式c指向A的对象
-
+            Console.WriteLine(c.GetType().IsValueType);
             Console.WriteLine($"a:{a.Name}");
             Console.WriteLine($"b:{b.Name}");
             Console.WriteLine($"c:{c.Name}");

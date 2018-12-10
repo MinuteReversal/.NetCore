@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/进程.csproj"
+                "${workspaceFolder}/启动多个线程.csproj"
             ],
             "problemMatcher": "$msCompile"
         }

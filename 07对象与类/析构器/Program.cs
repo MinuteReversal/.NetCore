@@ -6,7 +6,7 @@ namespace 析构器
     {
         ~A()
         {
-            System.Diagnostics.Trace.WriteLine("对象销毁了");
+            Console.WriteLine("对象销毁了");
         }
     }
     class Program

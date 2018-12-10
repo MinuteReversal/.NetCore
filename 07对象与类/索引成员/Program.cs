@@ -56,9 +56,9 @@ namespace 索引成员
         static void Main(string[] args)
         {
             var s = new Student();
-            s["name"] = "lily";
-            s["gender"] = "male";
-            s["bithday"] = "1985-11-11";
+            s["name"] = "lily";      //s.name="lily";
+            s["gender"] = "male";    //s.gender="male;
+            s["bithday"] = "1985-11-11";//s.bithday="1985-11-11";
             s["no"] = "1";
 
             Console.WriteLine($"name:{s["name"]},gender:{s["gender"]},bithday:{s["bithday"]},no:{s["no"]}");

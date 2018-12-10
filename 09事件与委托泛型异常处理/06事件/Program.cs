@@ -9,7 +9,7 @@ namespace app
         public void play()
         {
             //派发内容
-            Broadcast(this, new BroadcastContent { Message = "10月1日国庆放假7天" });
+            Broadcast(this, new BroadcastContent { Message = "双12要到了，各电商要进行打折。" });
         }
     }
 

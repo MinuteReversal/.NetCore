@@ -49,12 +49,21 @@ namespace SnakeGame
         //初始化设置
         public Game()
         {
+            Console.Title = "贪吃蛇";//窗口标题
             ScreenWidth = Console.WindowWidth;   //把终端的宽度保存下来
             ScreenHeight = Console.WindowHeight;//把终端的高度保存下来
             KeyDown += OnKeyDown;               //监测按钮按下
             Collision += OnCollision;           //监测碰撞
-            this.Reset();                       //重置游戏
+            this.Ready();
             this.Start();                       //开始游戏
+        }
+
+        public void Ready()
+        {
+            this.isPause = true;
+            this.Clear();
+            this.Scene.Add(new GameStart());
+            this.isPause = false;
         }
 
         //重置游戏
@@ -97,66 +106,69 @@ namespace SnakeGame
         private void OnKeyDown(object sender, KeyDownEventArgs e)
         {
             //以下为按键映射
-            if (e.KeyInfo.Key == ConsoleKey.W)//W
+            if (this.Player1 != null)
             {
-                Player1.ChangeDirection(Direction.Up);
-            }
-            else if (e.KeyInfo.Key == ConsoleKey.D)//D
-            {
-                Player1.ChangeDirection(Direction.Right);
-            }
-            else if (e.KeyInfo.Key == ConsoleKey.S)//S
-            {
-                Player1.ChangeDirection(Direction.Down);
-            }
-            else if (e.KeyInfo.Key == ConsoleKey.A)//A
-            {
-                Player1.ChangeDirection(Direction.Left);
-            }
-            else if (e.KeyInfo.Key == ConsoleKey.UpArrow)//上
-            {
-                Player1.ChangeDirection(Direction.Up);
-            }
-            else if (e.KeyInfo.Key == ConsoleKey.RightArrow)//右
-            {
-                Player1.ChangeDirection(Direction.Right);
-            }
-            else if (e.KeyInfo.Key == ConsoleKey.DownArrow)//下
-            {
-                Player1.ChangeDirection(Direction.Down);
-            }
-            else if (e.KeyInfo.Key == ConsoleKey.LeftArrow)//左
-            {
-                Player1.ChangeDirection(Direction.Left);
-            }
-            else if (e.KeyInfo.Key == ConsoleKey.Enter)
-            {
-                if (this.Scene.Any(i => i is GameOver))//如果是GameOver
+                if (e.KeyInfo.Key == ConsoleKey.W)//W
                 {
-                    this.Reset();
+                    Player1.ChangeDirection(Direction.Up);
                 }
-                else
+                else if (e.KeyInfo.Key == ConsoleKey.D)//D
                 {
-                    this.isPause = !this.isPause;
+                    Player1.ChangeDirection(Direction.Right);
+                }
+                else if (e.KeyInfo.Key == ConsoleKey.S)//S
+                {
+                    Player1.ChangeDirection(Direction.Down);
+                }
+                else if (e.KeyInfo.Key == ConsoleKey.A)//A
+                {
+                    Player1.ChangeDirection(Direction.Left);
+                }
+                else if (e.KeyInfo.Key == ConsoleKey.UpArrow)//上
+                {
+                    Player1.ChangeDirection(Direction.Up);
+                }
+                else if (e.KeyInfo.Key == ConsoleKey.RightArrow)//右
+                {
+                    Player1.ChangeDirection(Direction.Right);
+                }
+                else if (e.KeyInfo.Key == ConsoleKey.DownArrow)//下
+                {
+                    Player1.ChangeDirection(Direction.Down);
+                }
+                else if (e.KeyInfo.Key == ConsoleKey.LeftArrow)//左
+                {
+                    Player1.ChangeDirection(Direction.Left);
+                }
+                else if (e.KeyInfo.Key == ConsoleKey.Enter)
+                {
+                    if (this.Scene.Any(i => i is GameOver))//如果是GameOver
+                    {
+                        this.isPause = true;
+                        this.Reset();
+                    }
+                    else
+                    {
+                        this.isPause = !this.isPause;
+                    }
+                }
+                else if (e.KeyInfo.Key == ConsoleKey.Escape)
+                {
+                    if (this.Scene.Any(i => i is GameOver))
+                    {
+                        this.isQuit = true;
+                    }
                 }
             }
-            else if (e.KeyInfo.Key == ConsoleKey.Escape)
+            else if (this.Scene.Any(i => i is GameStart))
             {
-                if (this.Scene.Any(i => i is GameOver))
-                {
-                    this.isQuit = true;
-                }
-            }
-            else if (e.KeyInfo.Key == ConsoleKey.C)
-            {
-                this.Draw();
+                this.Reset();
             }
         }
 
         //开始游戏
         private void Start()
         {
-            Console.Title = "贪吃蛇";//窗口标题
             Console.CursorVisible = false;//隐藏光标
             Thread keydown = new Thread(ListenKeyDown);//实例化线程
             Thread gameLoop = new Thread(GameLoop);//实例化线程

@@ -1,13 +1,13 @@
 ﻿using System;
+using System.Collections.Generic;
 
-namespace 贪吃蛇
+namespace SnakeGame
 {
-
     class Program
     {
         static void Main(string[] args)
         {
-            
+            new Game();
         }
     }
 }

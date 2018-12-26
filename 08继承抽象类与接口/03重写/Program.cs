@@ -20,7 +20,7 @@ namespace 重写
 
         public void Swimming()
         {
-            Console.WriteLine($"{this.Color}颜色的{this.Name}正在游泳");
+            Console.WriteLine($"{this.Color}颜色的{this.Name}正在游泳");            
         }
 
     }

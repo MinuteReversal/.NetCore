@@ -8,24 +8,21 @@ namespace 创建一个二进制文件
         static void Main(string[] args)
         {
             string fileName = "1.dat";
+            char[] bts = { 'h', 'e', 'l', 'l', 'o' };
             FileStream fsw = File.Create(fileName);
-            byte[] bts = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-            // fs.Write(bts, 0, bts.Length);
-            // fs.Flush();
-
             BinaryWriter binaryWriter = new BinaryWriter(fsw);
             for (var i = 0; i < bts.Length; i++)
             {
-                binaryWriter.Write(i);
+                binaryWriter.Write(bts[i]);
             }
             binaryWriter.Close();
             fsw.Close();
 
             FileStream fsr = File.OpenRead(fileName);
             BinaryReader binaryReader = new BinaryReader(fsr);
-            for (var i = 0; i < 10; i++)
+            for (var i = 0; i < bts.Length; i++)
             {
-                Console.WriteLine(binaryReader.ReadChar());
+                Console.Write(binaryReader.ReadChar());
             }
             binaryReader.Close();
             fsr.Close();

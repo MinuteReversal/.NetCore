@@ -1,8 +1,11 @@
-﻿using System;
+﻿/*
+*需要安装 System.Drawing.Common
+*终端里输入 dotnet add package System.Drawing.Common
+ */
+using System;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
-//需要安装dotnet add package System.Drawing.Common
 
 namespace 创建一个图片文件
 {
@@ -16,7 +19,15 @@ namespace 创建一个图片文件
             {
                 for (var y = 0; y < 100; y++)
                 {
-                    bitmap.SetPixel(x, y, Color.FromArgb(0xFF, 0xFF, 0xFF, 0xFF));
+                    if (y % 2 == 0)
+                    {
+                        bitmap.SetPixel(x, y, Color.FromArgb(0xFF, 0xFF, 0xFF, 0xFF));//白色
+                    }
+                    else
+                    {
+                        bitmap.SetPixel(x, y, Color.FromArgb(0xFF, 0xFF, 0x00, 0x00));//红色
+                    }
+
                 }
             }
             bitmap.Save("1.bmp", ImageFormat.Bmp);

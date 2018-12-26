@@ -9,6 +9,7 @@ namespace _02创建文件
         {
             StreamWriter f = File.CreateText("1.txt");
             f.Write("hello world");
+            f.WriteLine("666");
             f.Close();
         }
     }

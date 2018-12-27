@@ -44,6 +44,7 @@ namespace 在图片上画一张笑脸
             //画一个弧线（笔，位置，开始角度，范围）
             g.DrawArc(pen, mouth, 0, 180);
 
+            //保存为png格式的图片，png是有透明(alpha)通道的
             bitmap.Save("1.png", ImageFormat.Png);
         }
     }

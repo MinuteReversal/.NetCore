@@ -1,0 +1,15 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/在图片上画一张笑脸.csproj"
+            ],
+            "problemMatcher": "$msCompile"
+        }
+    ]
+}

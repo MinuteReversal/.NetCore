@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace SnakeGame
 {
-    //动画组件接口
+    //动画组件接口,接口里只放功能签名
     public interface IComponent
     {
         //帧

@@ -78,23 +78,6 @@ namespace _06接口
     {
         static void Main(string[] args)
         {
-            ABird bird;
-            bird = new Eagle();
-            bird.Eat();
-            bird.Fly();
-            bird = new Penguin();
-            bird.Eat();
-            bird.Fly();
-
-            APlane plane;
-            plane = new F22();
-            plane.Refuel();
-            plane.Fly();
-            plane = new ToyPlane();
-            plane.Refuel();
-            plane.Fly();
-
-            Console.WriteLine("---------------------------");
             IFly fly;
             fly = new Eagle();
             fly.Fly();

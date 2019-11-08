@@ -12,8 +12,7 @@ namespace 创建一个图片文件
     class Program
     {
         static void Main(string[] args)
-        {
-
+        {            
             Bitmap bitmap = new Bitmap(100, 100);
             for (var x = 0; x < 100; x++)
             {

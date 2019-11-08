@@ -26,7 +26,7 @@ namespace app
             bool o4 = false || false;
             Console.WriteLine($"{o1},{o2},{o3},{o4}");
 
-            //异或
+            //异或 两边相同为false,不同为true
             bool x1 = true ^ true;
             bool x2 = false ^ true;
             bool x3 = true ^ false;

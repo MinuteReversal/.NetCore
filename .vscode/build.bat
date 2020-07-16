@@ -4,4 +4,4 @@ set fileName=%1
 set fileName=%fileName:.cs=.exe%
 echo %fileName%
 echo %1
-csc %1 -debug:full -out:%fileName%
+csc %1 -debug:portable -out:%fileName%

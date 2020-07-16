@@ -9,9 +9,9 @@
       "type": "clr",
       "request": "launch",
       "preLaunchTask": "build",
-      "program": "${workspaceFolder}\\${fileBasenameNoExtension}.exe",
+      "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
       "args": [],
-      "cwd": "${workspaceFolder}",
+      "cwd": "${fileDirname}",
       "console": "internalConsole",
       "stopAtEntry": false
     },

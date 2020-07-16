@@ -4,6 +4,9 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("hello world");
+        int a = 100;
+        int b = 3;
+        double r = a / (double)3;
+        Console.WriteLine(r);
     }
 }

@@ -1,0 +1,13 @@
+{
+  "script": {
+    "enableScriptNuGetReferences": true,
+    "defaultTargetFramework": "netcoreapp3.1"
+  },
+  "FormattingOptions": {
+    "useTabs": false,
+    "tabSize": 2,
+    "indentationSize": 2,
+    "smartIndent": 2,
+    "newLine": "\n"
+  }
+}

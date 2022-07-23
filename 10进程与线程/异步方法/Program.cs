@@ -29,13 +29,7 @@ namespace 异步方法
 			Console.WriteLine($"Fn{x}");
 			var tcs = new TaskCompletionSource<object>();
 
-			var timer = new System.Timers.Timer(1000);
-			timer.Elapsed += (s, e) =>
-			{
-				tcs.SetResult(null);
-			};
-			timer.AutoReset = false;
-			timer.Start();
+			tcs.SetResult(null);
 
 			return tcs.Task;
 		}
@@ -43,26 +37,14 @@ namespace 异步方法
 		{
 			Console.WriteLine($"Fn{3}");
 			var tcs = new TaskCompletionSource<int>();
-			var timer = new System.Timers.Timer(1000);
-			timer.Elapsed += (s, e) =>
-			{
-				tcs.SetResult(3);
-			};
-			timer.AutoReset = false;
-			timer.Start();
+			tcs.SetResult(3);
 			return tcs.Task;
 		}
 		static Task<int> Fn4(int x)
 		{
 			Console.WriteLine($"Fn{x}");
 			var tcs = new TaskCompletionSource<int>();
-			var timer = new System.Timers.Timer(1000);
-			timer.Elapsed += (s, e) =>
-			{
-				tcs.SetResult(x);
-			};
-			timer.AutoReset = false;
-			timer.Start();
+			tcs.SetResult(x);
 			return tcs.Task;
 		}
 		static Task Fn5()

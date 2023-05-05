@@ -50,7 +50,7 @@ namespace app
             return 3;
         }
 
-        static int Fn4(int i)
+        static int Fn4(int i=0,int j=0)
         {
             return i;
         }
